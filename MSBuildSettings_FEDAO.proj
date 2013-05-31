@@ -1,0 +1,17 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> 
+
+<PropertyGroup>
+<RootDir>../</RootDir>
+<SourceDir>../</SourceDir>
+</PropertyGroup>
+
+<ItemGroup>
+  <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\FEDAO\bin\$(ConfigureVersion)\YT.PT3.DAOBase.*"/> 
+  <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\FEDAOMSSQL\bin\$(ConfigureVersion)\YT.PT3.DAOMSSQL.*"/> 
+  <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\FEDAOOracle\bin\$(ConfigureVersion)\YT.PT3.DAOOracle.*"/> 
+</ItemGroup>
+
+<Import Project="$(WorkPath)\MSBuildSettings_User.targets"/>
+<Import Project="$(CommonProjPath)\Polaris_ProjectBuild.proj"/>
+
+</Project>
