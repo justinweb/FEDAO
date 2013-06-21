@@ -1,14 +1,14 @@
-﻿using System;
+﻿//#define _Use_Oracle_
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
-
-using YT.PT3.DAOBase;
 using System.Data;
 
-using YT.PT3.DAOOracle;
-using YT.PT3.DAOMSSQL;
+using ProgLab.DAO.DAOBase;
+using ProgLab.DAO.MSSQL;
+
 namespace UT
 {
     public class DAOTest
@@ -30,11 +30,14 @@ namespace UT
             bool result = opr.Insert(record, ref effectedRows);
             string cmd = opr.LastCommand;
 
+#if _Use_Oracle_
             TestOperator oprOracle = new TestOperator(new OracleDataBase(""));
             result = oprOracle.Insert(record, ref effectedRows);
             cmd = oprOracle.LastCommand;
+#endif
         }
 
+#if _Use_Oracle_
         /// <summary>
         /// 測試連接Oracle資料庫
         /// </summary>
@@ -105,11 +108,13 @@ namespace UT
                 Console.WriteLine(Thread.CurrentThread.ManagedThreadId.ToString() + "," + opr.RecordList.Count);             
             }
         }
+#endif
 
         public static void TestPolarisMSSQL()
         {
         }
 
+#if _Use_Oracle_
         public static void TestRO()
         {
             //OracleDataBase db = new OracleDataBase("User Id=system;Password=spmll1l3x96;Data Source=XE80");
@@ -124,6 +129,7 @@ namespace UT
             int effectedRows = 0;
             opr.Insert( record, ref effectedRows); 
         }
+#endif
     }
 
     #region 測試用的實作類別    

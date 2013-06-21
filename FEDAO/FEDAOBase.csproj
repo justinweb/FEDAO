@@ -8,8 +8,8 @@
     <ProjectGuid>{A7CDCE83-2309-4AA1-B856-4824A10C527E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>YT.PT3.DAOBase</RootNamespace>
-    <AssemblyName>YT.PT3.DAOBase</AssemblyName>
+    <RootNamespace>ProgLab.DAO.DAOBase</RootNamespace>
+    <AssemblyName>ProgLab.DAO.DAOBase</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>

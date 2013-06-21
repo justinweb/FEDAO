@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace YT.PT3.DAOBase
+namespace ProgLab.DAO.DAOBase
 {
     #region 列舉型別
     /// <summary>

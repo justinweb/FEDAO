@@ -4,7 +4,7 @@ using System.Text;
 using System.Data;
 using System.Globalization;
 
-namespace YT.PT3.DAOBase
+namespace ProgLab.DAO.DAOBase
 {
     /// <summary>
     /// 實作IOperator的基底類別

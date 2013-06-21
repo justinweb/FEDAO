@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using YT.PT3.DAOBase;
+
 using System.Data;
 using System.Data.SqlClient;
+using ProgLab.DAO.DAOBase;
 
-namespace YT.PT3.DAOMSSQL
+namespace ProgLab.DAO.MSSQL
 {
     public class MSSQLDataBase : AbstractDataBase
     {

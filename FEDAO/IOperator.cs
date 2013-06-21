@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 
-namespace YT.PT3.DAOBase
+namespace ProgLab.DAO.DAOBase
 {
     /// <summary>
     /// 利用IDataBase的功能執行對應之IRecord的CRUD

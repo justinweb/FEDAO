@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 
-namespace YT.PT3.DAOBase
+namespace ProgLab.DAO.DAOBase
 {
     /// <summary>
     /// 用來表示Record中的欄位屬性

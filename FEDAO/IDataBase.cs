@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 
-namespace YT.PT3.DAOBase
+namespace ProgLab.DAO.DAOBase
 {
     /// <summary>
     /// 定義資料庫的操作及型別轉換函式

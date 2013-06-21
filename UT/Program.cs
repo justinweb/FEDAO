@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using YT.PT3.DAOBase;
 using System.Data;
-using YT.PT3.DAOOracle;
+using ProgLab.DAO.DAOBase;
+using ProgLab.DAO.MSSQL;
+
+
 
 namespace UT
 {
@@ -25,7 +27,7 @@ namespace UT
         /// </summary>
         static void TestWHEREStatement()
         {
-            IDataBase db = new OracleDataBase("User Id=bpi;Password=yuantacps;Data Source=TS03");
+            IDataBase db = new MSSQLDataBase("User Id=bpi;Password=yuantacps;Data Source=TS03");
 
             // 基本用法
             AbstractWHEREStatement where = new AbstractWHEREStatement("TxDate", RelationEnum.Equal, new DateTime(2011, 3, 3));
@@ -70,7 +72,7 @@ namespace UT
             GenericColumn<int> ti = new GenericColumn<int>("TInt");
             GenericColumn<int?> tin = new GenericColumn<int?>("TIntN");
 
-            OracleDataBase db = new OracleDataBase("User Id=bpi;Password=yuantacps;Data Source=TS03");
+            MSSQLDataBase db = new MSSQLDataBase("User Id=bpi;Password=yuantacps;Data Source=TS03");
             DataTable dt = db.QueryCommand("SELECT NULL as TInt, NULL as TIntN FROM ptUnitTrader");
 
             DataRow dr = dt.Rows[0];
@@ -81,6 +83,7 @@ namespace UT
             string s1 = dr.IsNull("TInt") ? (isSupportNull ? null : "default") : dr["TInt"].ToString();
         }
 
+#if _Use_Oracle_
         static void TestOracleRaw()
         {
             //byte b = Convert.ToByte("01", 16);
@@ -106,12 +109,13 @@ namespace UT
 
             db.Close();
         }
+#endif
 
 
         static void Main(string[] args)
         {
             DateTime theTime = DateTime.Parse("2012/07/17 11:47:37");
-            OracleDataBase db = new OracleDataBase("Data Source=ts03.tw.yuanta.com;User Id=gets;Password=gets123");
+            //OracleDataBase db = new OracleDataBase("Data Source=ts03.tw.yuanta.com;User Id=gets;Password=gets123");
 
             //TestGenericColumn();
             //TestOracleRaw();

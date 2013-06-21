@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using YT.PT3.DAOBase;
 using System.Data;
 
 using Oracle.DataAccess.Client;
+using ProgLab.DAO.DAOBase;
 
 namespace YT.PT3.DAOOracle
 {
